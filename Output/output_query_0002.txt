@@ -1,0 +1,37 @@
+Query 0002: máy bay nào bay từ đà nẵng đến thành phố  hồ chí minh mất 1 giờ ?
+    
+----- Dependency Parsing -----
+qdet: máy bay -> nào
+nsubj: bay -> máy bay
+root: bay
+case: đà nẵng -> từ
+obl: bay -> đà nẵng
+nmod: hồ chí minh -> thành phố
+case: hồ chí minh -> đến
+obl: bay -> hồ chí minh
+advmod: bay -> mất
+nummod: giờ -> 1
+dobj: mất -> giờ
+punc: mất -> ?
+
+
+----- Grammatical Relations -----
+(s1 PRED "bay")
+(s1 LSUBJ "máy bay")
+(s1 LOBJ "giờ")
+(s1 TAKE "0")
+(s1 FROM "đà nẵng")
+(s1 TO "hồ chí minh")
+
+
+----- Logical Form -----
+WH f1: (&FLIGHT f1 SOURCE f1 (NAME c1 "đà nẵng") DEST f1 (NAME c2 "hồ chí minh")    RUN-TIME r1 (NAME t3 "1:00HR"))
+
+
+----- Procedural Semantic -----
+(PRINT-ALL ?f1 (FLIGHT ?f1) (DTIME ?f1 ĐN ?t1) (ATIME ?f1 HCM ?t2) (RUN-TIME ?f1 ĐN HCM ?t3))
+
+
+----- Output -----
+Flights: VN2
+

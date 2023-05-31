@@ -1,0 +1,28 @@
+Query 0008: có máy bay nào xuất phát từ hải phòng không ?
+    
+----- Dependency Parsing -----
+qdet: máy bay -> nào
+nsubj: xuất phát -> máy bay
+root: xuất phát
+case: hải phòng -> từ
+obl: xuất phát -> hải phòng
+punc: xuất phát -> ?
+
+
+----- Grammatical Relations -----
+(s1 PRED "xuất phát")
+(s1 LSUBJ "máy bay")
+(s1 FROM "hải phòng")
+
+
+----- Logical Form -----
+WH f1: (&FLIGHT f1 SOURCE f1 (NAME c1 "hải phòng")     )
+
+
+----- Procedural Semantic -----
+(PRINT-ALL ?f1 (FLIGHT ?f1) (DTIME ?f1 HP ?t1) (ATIME ?f1 ?c2 ?t2) )
+
+
+----- Output -----
+Flights: None
+

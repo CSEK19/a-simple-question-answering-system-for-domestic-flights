@@ -1,0 +1,31 @@
+Query 0001: máy bay nào đến thành phố huế lúc 13:30hr ?
+    
+----- Dependency Parsing -----
+qdet: máy bay -> nào
+nsubj: đến -> máy bay
+root: đến
+nmod: huế -> thành phố
+obl: đến -> huế
+case: 13:30hr -> lúc
+obl: đến -> 13:30hr
+punc: đến -> ?
+
+
+----- Grammatical Relations -----
+(s1 PRED "đến")
+(s1 LSUBJ "máy bay")
+(s1 TO "huế")
+(s1 AT-TIME "13:30hr")
+
+
+----- Logical Form -----
+WH f1: (&FLIGHT f1  DEST f1 (NAME c2 "huế")  ARRIVE a1 (NAME t2 "13:30hr")  )
+
+
+----- Procedural Semantic -----
+(PRINT-ALL ?f1 (FLIGHT ?f1) (ATIME ?f1 HUE 13:30HR) )
+
+
+----- Output -----
+Flights: VJ1
+

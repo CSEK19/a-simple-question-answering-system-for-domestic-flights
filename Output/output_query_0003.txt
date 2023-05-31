@@ -1,0 +1,30 @@
+Query 0003: hãy cho biết mã hiệu các máy bay hạ cánh ở huế ?
+    
+----- Dependency Parsing -----
+qdet: mã hiệu -> hãy cho biết
+det: máy bay -> các
+nmod: máy bay -> mã hiệu
+nsubj: hạ cánh -> máy bay
+root: hạ cánh
+case: huế -> ở
+obl: hạ cánh -> huế
+punc: hạ cánh -> ?
+
+
+----- Grammatical Relations -----
+(s1 PRED "hạ cánh")
+(s1 LSUBJ "máy bay")
+(s1 TO "huế")
+
+
+----- Logical Form -----
+WH f1: (&FLIGHT f1  DEST f1 (NAME c2 "huế")    )
+
+
+----- Procedural Semantic -----
+(PRINT-ALL ?f1 (FLIGHT ?f1) (ATIME ?f1 HUE ?t2) )
+
+
+----- Output -----
+Flights: VN1, VJ1
+

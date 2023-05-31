@@ -1,0 +1,31 @@
+Query 0010: có máy bay nào bay từ  phòng đến khánh hòa không ?
+    
+----- Dependency Parsing -----
+qdet: máy bay -> nào
+nsubj: bay -> máy bay
+root: bay
+case: khánh hòa -> đến
+case: khánh hòa -> ò
+case: khánh hòa -> từ
+obl: bay -> khánh hòa
+punc: bay -> ?
+
+
+----- Grammatical Relations -----
+(s1 PRED "bay")
+(s1 LSUBJ "máy bay")
+(s1 TO "khánh hòa")
+(s1 FROM "khánh hòa")
+
+
+----- Logical Form -----
+WH f1: (&FLIGHT f1 SOURCE f1 (NAME c1 "khánh hòa") DEST f1 (NAME c2 "khánh hòa")    )
+
+
+----- Procedural Semantic -----
+(PRINT-ALL ?f1 (FLIGHT ?f1) (DTIME ?f1 KH ?t1) (ATIME ?f1 KH ?t2) (RUN-TIME ?f1 KH KH ?t3))
+
+
+----- Output -----
+Flights: None
+

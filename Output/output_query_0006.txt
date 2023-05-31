@@ -1,0 +1,27 @@
+Query 0006: máy bay vn4 có xuất phát từ đà nẵng không ?
+    
+----- Dependency Parsing -----
+nmod: vn4 -> máy bay
+nsubj: xuất phát -> vn4
+root: xuất phát
+case: đà nẵng -> từ
+obl: xuất phát -> đà nẵng
+punc: xuất phát -> ?
+
+
+----- Grammatical Relations -----
+(s1 PRED "xuất phát")
+(s1 LSUBJ "vn4")
+(s1 FROM "đà nẵng")
+
+
+----- Logical Form -----
+WH f1: (&FLIGHT f1 SOURCE f1 (NAME c1 "đà nẵng")     )
+
+
+----- Procedural Semantic -----
+(PRINT-ALL ?f1 (FLIGHT ?f1) (DTIME ?f1 ĐN ?t1) (ATIME ?f1 ?c2 ?t2) )
+
+
+----- Output -----
+Answer: No

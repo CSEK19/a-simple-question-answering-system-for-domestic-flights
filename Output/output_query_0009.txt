@@ -1,0 +1,32 @@
+Query 0009: máy bay của hãng hàng không vietjet air bay đến những thành phố nào ?
+    
+----- Dependency Parsing -----
+nmod: vietjet air -> hãng hàng không
+case: vietjet air -> của
+aposs: máy bay -> vietjet air
+nsubj: bay -> máy bay
+root: bay
+det: thành phố -> những
+case: thành phố -> đến
+obl: bay -> thành phố
+qdet: thành phố -> nào
+punc: bay -> ?
+
+
+----- Grammatical Relations -----
+(s1 PRED "bay")
+(s1 LSUBJ "máy bay")
+(s1 TO "thành phố")
+
+
+----- Logical Form -----
+WH c2: (&FLIGHT f1  DEST f1 (NAME c2 "thành phố")    )
+
+
+----- Procedural Semantic -----
+(PRINT-ALL ?c2 (FLIGHT ?f1) (BRAND-NAME ?f1 vietjet air) (ATIME ?f1 ?c2 ?t2) )
+
+
+----- Output -----
+Destination: HP, HN, KH, HUE, ĐN
+

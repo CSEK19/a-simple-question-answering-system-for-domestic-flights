@@ -1,0 +1,32 @@
+Query 0005: máy bay nào bay từ thành phố hồ chí minh đến hà nội ?
+    
+----- Dependency Parsing -----
+qdet: máy bay -> nào
+nsubj: bay -> máy bay
+root: bay
+nmod: hồ chí minh -> thành phố
+case: hồ chí minh -> từ
+obl: bay -> hồ chí minh
+case: hà nội -> đến
+obl: bay -> hà nội
+punc: bay -> ?
+
+
+----- Grammatical Relations -----
+(s1 PRED "bay")
+(s1 LSUBJ "máy bay")
+(s1 FROM "hồ chí minh")
+(s1 TO "hà nội")
+
+
+----- Logical Form -----
+WH f1: (&FLIGHT f1 SOURCE f1 (NAME c1 "hồ chí minh") DEST f1 (NAME c2 "hà nội")    )
+
+
+----- Procedural Semantic -----
+(PRINT-ALL ?f1 (FLIGHT ?f1) (DTIME ?f1 HCM ?t1) (ATIME ?f1 HN ?t2) (RUN-TIME ?f1 HCM HN ?t3))
+
+
+----- Output -----
+Flights: VN3
+

@@ -1,0 +1,39 @@
+Query 0007: thời gian máy bay vj5 bay từ thành phố  hà nội đến khánh hòa mất mấy giờ ?
+    
+----- Dependency Parsing -----
+nmod: vj5 -> máy bay
+nmod: thời gian -> vj5
+acl: vj5 -> bay
+nmod: hà nội -> thành phố
+case: hà nội -> từ
+obl: bay -> hà nội
+case: khánh hòa -> đến
+obl: bay -> khánh hòa
+nsubj: mất -> thời gian
+root: mất
+qdet: giờ -> mấy
+dobj: mất -> giờ
+punc: mất -> ?
+
+
+----- Grammatical Relations -----
+(s1 PRED "mất")
+(s1 LSUBJ "thời gian")
+(s1 LOBJ "giờ")
+(s2 LSUBJ "vj5")
+(s2 PRED "bay")
+(s1 FROM "hà nội")
+(s1 TO "khánh hòa")
+
+
+----- Logical Form -----
+WH t3: (&FLIGHT vj5 SOURCE vj5 (NAME c1 "hà nội") DEST vj5 (NAME c2 "khánh hòa")    RUN-TIME r1 t3)
+
+
+----- Procedural Semantic -----
+(PRINT-ALL ?t3 (FLIGHT VJ5) (DTIME VJ5 HN ?t1) (ATIME VJ5 KH ?t2) (RUN-TIME VJ5 HN KH ?t3))
+
+
+----- Output -----
+Run Time: 1:45HR
+

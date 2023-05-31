@@ -1,0 +1,34 @@
+Query 0004: máy bay nào xuất phát từ thành phố hồ chí minh, lúc mấy giờ ?
+    
+----- Dependency Parsing -----
+qdet: máy bay -> nào
+nsubj: xuất phát -> máy bay
+root: xuất phát
+nmod: hồ chí minh -> thành phố
+case: hồ chí minh -> từ
+obl: xuất phát -> hồ chí minh
+qdet: giờ -> mấy
+case: giờ -> lúc
+obl: xuất phát -> giờ
+punc: xuất phát -> ?
+
+
+----- Grammatical Relations -----
+(s1 PRED "xuất phát")
+(s1 LSUBJ "máy bay")
+(s1 FROM "hồ chí minh")
+(s1 AT-TIME "giờ")
+
+
+----- Logical Form -----
+WH f1, t1: (&FLIGHT f1 SOURCE f1 (NAME c1 "hồ chí minh")    DEPART d1 (NAME t1 "giờ") )
+
+
+----- Procedural Semantic -----
+(PRINT-ALL ?f1, ?t1 (FLIGHT ?f1) (DTIME ?f1 HCM ?t1) (ATIME ?f1 ?c2 ?t2) )
+
+
+----- Output -----
+Flights: VN1, VN3, VN5, VJ3, VN3
+Depart Time: 10:00HR, 4:30HR, 17:00HR, 9:45HR, 8:30HR
+
