@@ -3,7 +3,6 @@
 ## Personal Information
 
 Student Name: Tran Tien Phat. \
-Student ID: 1952386. \
 Semester HK222 at Ho Chi Minh City University of Technology.
 
 ## Directory Information
